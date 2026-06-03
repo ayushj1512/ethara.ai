@@ -35,6 +35,17 @@ for router in [
     app.include_router(router, prefix="/api")
 
 
+@app.get("/", tags=["System"], summary="API welcome", description="Friendly landing response for the deployed backend.")
+def root():
+    return {
+        "status": "running",
+        "message": "Ethara backend is awake, stocked, and ready to ship orders.",
+        "service": "Ethara Inventory & Order Management API",
+        "docs": "/docs",
+        "health": "/health",
+    }
+
+
 @app.get("/health", tags=["System"], summary="Health check", description="Verify that the API service is running.")
 def health():
     return {"status": "ok"}
