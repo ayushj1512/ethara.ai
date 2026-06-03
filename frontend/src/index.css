@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { margin: 0; background: #f6f7f8; color: #111; }
+button, input, select, textarea { font: inherit; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-md bg-zinc-950 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-zinc-400; }
+.btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-md border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-950 shadow-sm transition hover:border-teal-200 hover:bg-teal-50; }
+.input { @apply w-full rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-100; }
+.search-field { @apply relative block; }
+.search-icon { @apply pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400; }
+.search-input { @apply pl-12; }
+.panel { @apply rounded-lg border border-zinc-200 bg-white shadow-sm; }
+.th { @apply px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-zinc-500; }
+.td { @apply px-4 py-3 text-sm text-zinc-800; }
+.accent-band { @apply border border-teal-100 bg-teal-50 text-teal-900; }
